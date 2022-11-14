@@ -1,0 +1,20 @@
+<center> <h1> Display All Data </h1> </center>
+<br>
+<center>  
+    <table border="1px">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+        <% @users.each do |user| %>    
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.city %></td>
+                <td><%= user.phone %></td>
+                <td><%= link_to  "Info", "show_info/ #{user.id}" %></td>
+            </tr>
+        <% end %>
+    </table> 
+</center>
